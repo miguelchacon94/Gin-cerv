@@ -8,25 +8,29 @@
 	<link rel="stylesheet" href="css/CSS.css" >
 </head>
 <body>
-	<script src="js/cargarcervezas.js"></script>
 	<header align="center"><h1>Cervezas</h1></header>
 	<body>
 		<nav>
 		<ul>
 			<li><a  href=../index.html>Home</a></li>
-  			<li><a class="active" href="">Cervezas</a></li>
-  			<li><a href="">Licores generales</a></li>
+  			<li><a href="">Cervezas</a></li>
+  			<li><a class="active" href="">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="">About Us</a></li>
 		</ul>
 		</nav>
-		<div id="update">
-			
+		<div>
+		<script type="text/php">
+			$jsondata = file_get_contents('licores.json'); 
+			$lista=json_decode($jsondata, true);
+			echo '<ul>'; 
+			foreach($lista as $name=>$value){
+			echo '<li> '.$value.'</li>';
+			}
+		echo '</ul>'; 
+		</script>
 		</div>
-	</body>
-
-
-<script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
 </body>
