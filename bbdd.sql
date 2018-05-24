@@ -39,6 +39,9 @@ CREATE TABLE `vino` (
 ALTER TABLE `vino`
   ADD PRIMARY KEY (`id_vino`);
 
+   INSERT INTO `vino` (`id_vino`, `nombre`, `tipo`, `year`, `lugar`,`opinion`) VALUES
+('1', 'Protos', 'Blanco', '2016','Rioja' , 'Sin comentarios');
+
  CREATE TABLE `licor` (
   `id_licor` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `nombre` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
