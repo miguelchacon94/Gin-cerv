@@ -12,7 +12,7 @@ CREATE TABLE `usuario` (
 ALTER TABLE `usuario`
   ADD PRIMARY KEY (`nombre_usuario`);
 
-  INSERT INTO `data_users` (`nombre_usuario`, `password`, `nombre`, `email`, `tipo`) VALUES
+  INSERT INTO `usuario` (`nombre_usuario`, `password`, `nombre`, `email`, `tipo`) VALUES
 ('miguel', '1234', 'Miguel Chacon', 'miguel@prueba.com', 'administrador');
 
 
@@ -26,6 +26,8 @@ CREATE TABLE `cerveza` (
 
 ALTER TABLE `cerveza`
   ADD PRIMARY KEY (`id_cerveza`);
+   INSERT INTO `cerveza` (`id_cerveza`, `nombre`, `tipo`, `lugar`, `opinion`) VALUES
+('1', 'Mahou', 'Rubia', 'Madrid, España', 'Ninguna');
 
 CREATE TABLE `vino` (
   `id_vino` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
