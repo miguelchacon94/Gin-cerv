@@ -15,6 +15,12 @@ ALTER TABLE `usuario`
   INSERT INTO `usuario` (`nombre_usuario`, `password`, `nombre`, `email`, `tipo`) VALUES
 ('miguel', '1234', 'Miguel Chacon', 'miguel@prueba.com', 'administrador');
 
+CREATE USER 'miguel' IDENTIFIED BY '1234';
+GRANT ALL PRIVILEGES ON * . * TO 'miguel';
+FLUSH PRIVILEGES;
+
+CREATE USER 'generico_cerveza' IDENTIFIED BY '';
+GRANT SELECT ON gin_cerv.cerveza TO 'generico_cerveza';
 
 CREATE TABLE `cerveza` (
   `id_cerveza` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
@@ -76,3 +82,4 @@ ALTER TABLE `vino`
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
     ALTER TABLE `otro`
   ADD PRIMARY KEY (`id_otro`);
+
