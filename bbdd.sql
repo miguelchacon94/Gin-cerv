@@ -3,7 +3,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `usuario` (
   `nombre_usuario` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `nombre` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `email` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `tipo` varchar(30) COLLATE utf8_spanish_ci NOT NULL )
@@ -27,7 +27,7 @@ CREATE TABLE `cerveza` (
   `nombre` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `tipo` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
  `lugar` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
-  `opinion` varchar(255) COLLATE utf8_spanish_ci 
+  `opinion` varchar(1000) COLLATE utf8_spanish_ci 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 ALTER TABLE `cerveza`
@@ -41,7 +41,7 @@ CREATE TABLE `vino` (
   `tipo` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `year` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
  `lugar` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
-  `opinion` varchar(255) COLLATE utf8_spanish_ci 
+  `opinion` varchar(1000) COLLATE utf8_spanish_ci 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 ALTER TABLE `vino`
@@ -56,7 +56,7 @@ ALTER TABLE `vino`
   `tipo` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `clasifiocacion` varchar(30) COLLATE utf8_spanish_ci,
  `lugar` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
-  `opinion` varchar(255) COLLATE utf8_spanish_ci ,
+  `opinion` varchar(100) COLLATE utf8_spanish_ci ,
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
  ALTER TABLE `licor`
@@ -67,7 +67,7 @@ ALTER TABLE `vino`
   `nombre` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `tipo` varchar(30) COLLATE utf8_spanish_ci NOT NULL,
   `subtipo` varchar(30) COLLATE utf8_spanish_ci,
-  `opinion` varchar(255) COLLATE utf8_spanish_ci 
+  `opinion` varchar(1000) COLLATE utf8_spanish_ci 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
     ALTER TABLE `otro`
   ADD PRIMARY KEY (`id_otro`);
