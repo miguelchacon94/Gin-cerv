@@ -15,7 +15,7 @@
 			<li><a href=../index.html>Home</a></li>
   			<li><a href="../Cervezas/index.php">Cervezas</a></li>
   			<li><a href="">Vinos</a></li>
-  			<li><a class="active" href="Licores/index.php">Licores generales</a></li>
+  			<li><a class="active" href="index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="../Login/index.htm">Entrar</a></li>
   			<li><a href="">About Us</a></li>
