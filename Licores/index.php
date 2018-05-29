@@ -12,10 +12,10 @@
 	<body>
 		<nav>
 		<ul>
-			<li><a class="active" href=../index.html>Home</a></li>
+			<li><a href=../index.html>Home</a></li>
   			<li><a href="../Cervezas/index.php">Cervezas</a></li>
   			<li><a href="">Vinos</a></li>
-  			<li><a href="Licores/index.php">Licores generales</a></li>
+  			<li><a class="active" href="Licores/index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="../Login/index.htm">Entrar</a></li>
   			<li><a href="">About Us</a></li>
@@ -23,16 +23,34 @@
 		</nav>
 		<div>
 		<?php
-			 
-			$data = file_get_contents("js/licores.json");
-			$licores = json_decode($data);
 
-			
-			echo "<br><br>";
-			foreach ($licores as $licor) {
-			echo $licor->name . "   "; 
-			echo "<br>";
-	
+		$dbhost = "localhost";
+  		$dbuser = "selection";
+ 		$dbpass = "";
+ 		$dbname = "gin_cerv";
+ 		$tablename= "licor";
+ 		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+ 		 // Test if connection succeeded
+ 		 if(mysqli_connect_errno()) {
+ 		   die("Database connection failed: " . 
+        		 mysqli_connect_error() . 
+        		 " (" . mysqli_connect_errno() . ")"
+   			 );
+ 		 }
+ 		 	$query = "SELECT * FROM `$tablename`" ;
+ 		 	$result = mysqli_query($connection, $query);
+ 		 	if ($result) {
+				if ($result->num_rows > 0) {
+    // output data of each row
+    				while($row = $result->fetch_assoc()) {
+       				 echo "<li> <p> Nombre: " . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p><p> Lugar: " . $row["lugar"]. "</p></li>";
+    					}
+    					}			
+				
+				} else {
+		// Failure
+		// $message = "Subject creation failed";
+				die("Database query failed. " . mysqli_error($connection));
 			}
 		?>
 		</div>

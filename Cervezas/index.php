@@ -13,19 +13,21 @@
 	<body>
 		<nav>
 		<ul>
-			<li><a  href=../index.html>Home</a></li>
-  			<li><a class="active" href="">Cervezas</a></li>
-  			<li><a href="">Licores generales</a></li>
+			<li><a href=index.html>Home</a></li>
+  			<li><a class="active" href="Cervezas/index.php">Cervezas</a></li>
+  			<li><a href="">Vinos</a></li>
+  			<li><a href="Licores/index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
+  			<li><a href="../Login/index.html">Entrar</a></li>
   			<li><a href="">About Us</a></li>
-		</ul>
+  		</ul>
 		</nav>
 		<ul>
 
 		<?php
 
 		$dbhost = "localhost";
-  		$dbuser = "root";
+  		$dbuser = "selection";
  		$dbpass = "";
  		$dbname = "gin_cerv";
  		$tablename= "cerveza";
