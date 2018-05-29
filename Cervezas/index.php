@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="css/CSS.css" >
 </head>
 <body>
-	
+
 	<header align="center"><h1>Cervezas</h1></header>
 	<body>
 		<nav>
@@ -34,8 +34,8 @@
  		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
  		 // Test if connection succeeded
  		 if(mysqli_connect_errno()) {
- 		   die("Database connection failed: " . 
-        		 mysqli_connect_error() . 
+ 		   die("Database connection failed: " .
+        		 mysqli_connect_error() .
         		 " (" . mysqli_connect_errno() . ")"
    			 );
  		 }
@@ -45,10 +45,10 @@
 				if ($result->num_rows > 0) {
     // output data of each row
     				while($row = $result->fetch_assoc()) {
-       				 echo "<li> <p> Nombre: " . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p><p> Lugar: " . $row["lugar"]. "</p></li>";
+       				 echo '<li> <img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="Cargando cervezas..." width="200px" height="250px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></li>";
+    				}
     					}
-    					}			
-				
+
 				} else {
 		// Failure
 		// $message = "Subject creation failed";
