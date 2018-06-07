@@ -3,6 +3,7 @@
 <head>
 	<title>Gin&cerv</title>
 	<meta charset="utf-8" />
+	<meta http-equiv=”Content-Language” content=”es”/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/CSS.css" >
@@ -19,7 +20,7 @@
   			<li><a href="../Licores/index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="../Login/index.html">Entrar</a></li>
-  			<li><a href="">About Us</a></li>
+  			<li><a href="../About/index.html">About Us</a></li>
   		</ul>
 		</nav>
 
@@ -38,9 +39,9 @@
         		 " (" . mysqli_connect_errno() . ")"
    			 );
  		 }
- 		 $nombre = $_POST['cerveza'];
- 		 if ($_POST) {
-    // asignar w1 y w2 a dos variables
+ 		  		 if ($_POST) {
+ 					 $nombre = $_POST['cerveza'];
+
     		$query  = "SELECT * ";
 			$query .= "FROM cerveza ";
 			$query .= "WHERE nombre = '$nombre'";
@@ -51,7 +52,7 @@
 			if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo '<img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'" width="200px" height="250px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p><p>Opinion: </p><p>".$row["opinion"]."</p>";
+        echo '<img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'" width="200px" height="250px"> <p> Nombre:'  . utf8_encode($row["nombre"]). " </p> <p>Tipo: " . utf8_encode($row["tipo"]). "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p><p>Opinion: </p><p>".utf8_encode($row["opinion"])."</p>";
     }
 }
 

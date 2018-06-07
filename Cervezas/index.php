@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
 	<title>Gin&cerv</title>
-	<meta charset="utf-8" />
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv=”Content-Language” content=”es”>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/CSS.css" >
@@ -19,7 +21,7 @@
   			<li><a href="../Licores/index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="../Login/index.html">Entrar</a></li>
-  			<li><a href="">About Us</a></li>
+  			<li><a href="../About/index.html">About Us</a></li>
   		</ul>
 		</nav>
 		
@@ -32,6 +34,7 @@
  		$dbname = "gin_cerv";
  		$tablename= "cerveza";
  		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+
  		 // Test if connection succeeded
  		 if(mysqli_connect_errno()) {
  		   die("Database connection failed: " . 
@@ -51,17 +54,21 @@
     						
     					
        				 echo '<div class="col-md-4"> '; 
-       				 echo '<img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="' .$row["nombre"]. '" width="200px" height="250px" onclick="'.'"><p  > Nombre:'  . $row["nombre"]. ' </p> <p>Tipo: ' . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
+       				 echo '<img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="' .$row["nombre"]. '" width="200px" height="250px" ><p  > Nombre:'  . $row["nombre"]. ' </p> <p>Tipo: ' . $row["tipo"]. "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p></div>";
        				 $contador+1;
        				 $iterador+1;
        				 }else{
        				 	$contador=0;
        				 	echo "</div>";
        				 	echo '<div class="row">';
-       				 	echo '<div class="col-md-4"> <img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="' .$row["nombre"]. '" width="200px" height="250px" "onclick="' .'" > <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
+       				 	echo '<div class="col-md-4"> <img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="' .$row["nombre"]. '" width="200px" height="250px" > <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p></div>";
        				 	$contador+1;
        				 	$iterador+1;
        				 }
+    					}
+    					if ($contador<3) {
+    						$resto=(3-$contador)*4;
+    						echo '<div class="col-md-'.$resto.'"></div>';
     					}
 							echo "</div>";
     					}			
@@ -76,6 +83,7 @@
 		?>
 		<div class="row">
 			<div class="col-md-3"></div><div class="col-md-6">
+				
 		<p >¿De que cerveza quieres saber nuestra opinión?</p>
 		<form action="informacioncompleta.php" method="POST" >
 <select name="cerveza">

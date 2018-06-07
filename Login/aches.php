@@ -13,28 +13,16 @@
 		<ul>
 			<li><a href=../index.html>Home</a></li>
   			<li><a href="../Cervezas/index.php">Cervezas</a></li>
-  			<li><a href="">Vinos</a></li>
+  			<li><a href="../Vinos/vino.php">Vinos</a></li>
   			<li><a href="../Licores/index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
-  			<li><a class="active" href="../Login/index.htm">Entrar</a></li>
+  			<li><a class="active" href="../Login/index.html">Entrar</a></li>
   			<li><a href="">About Us</a></li>
   		</ul>
 		</nav>
 		<?php
 		session_start();
-		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
-		} else {
-
-   echo "Esta pagina es solo para usuarios registrados.<br>";
-   echo "<br><a href='index.html'>Login</a>";
-exit;
-}
-$now = time();
-if($now > $_SESSION['expire']) {
-session_destroy();
-echo "Su sesion a terminado, <a href='login.html'>Necesita Hacer Login</a>";
-exit;
-}
+		if(isset($_SESSION['username'])){
 
 
 						?>
@@ -48,7 +36,7 @@ exit;
 
 						</select>
 						<br>
-						<select name="donde" action="acceso.php">
+						<select name="donde" action="">
 
 						<option>Cervezas</option>
 
@@ -61,30 +49,12 @@ exit;
 						<input type="submit" onclick="" />
 						</select>
 						<button type="button" src="logout.php">Cerrar Sesion</button>
-					<?php
-
-function cerrarSesion(){
-	header('Location: ../index.html');
-unset($username);
-unset($Password);
-//$_SESSION = array();
-
-
-//if (ini_get("session.use_cookies")) {
-  //  $params = session_get_cookie_params();
-    //setcookie(session_name(), '', time() - 42000,
-        //$params["path"], $params["domain"],
-        //$params["secure"], $params["httponly"]
-    //);
-//}
-
-// Finalmente, destruir la sesión.
-echo "<p> cerrar</p>";
-//header('Location: ../index.html');
+	<?php
+}else{
+	header('Location: index.html');
 }
-
-		mysqli_close($connection);
-
- 		 ?>
+	?>
+}
+			
 </body>
 </html>
