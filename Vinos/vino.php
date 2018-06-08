@@ -75,7 +75,43 @@
 			}
 			mysqli_close($connection);
 		?>
-		
+		<div class="row">
+			<div class="col-md-3"></div><div class="col-md-6">
+				
+		<p >¿De que vino quieres saber nuestra opinión?</p>
+		<form action="informacioncompleta.php" method="POST" >
+<select name="vino">
+<?php 
+	$dbhost = "localhost";
+  		$dbuser = "selection";
+ 		$dbpass = "";
+ 		$dbname = "gin_cerv";
+ 		$tablename= "vino";
+ 		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+ 		 // Test if connection succeeded
+ 		 if(mysqli_connect_errno()) {
+ 		   die("Database connection failed: " . 
+        		 mysqli_connect_error() . 
+        		 " (" . mysqli_connect_errno() . ")"
+   			 );
+ 		 }
+ 		 	$query = "SELECT * FROM `$tablename`" ;
+ 		 	$result = mysqli_query($connection, $query);
+ 		 	if ($result) {
+				if ($result->num_rows > 0) {
+					while($row = $result->fetch_assoc()) {
+			echo'<option name = "nombre" value="'.$row["nombre"].'">'.htmlspecialchars($row["nombre"]).'</option>';
+		}
+	}
+}
+mysqli_close($connection);
+ ?>
+</select>
+<p ><input type="submit" /></p>
+</form>
+</div>
+<div class="col-md-3"></div>
+</div>
 	
 
 		<div class="do-the-thing">
