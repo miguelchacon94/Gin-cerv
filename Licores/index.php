@@ -13,12 +13,11 @@
 	<body>
 		<nav>
 		<ul>
-			<li><a href=../index.html>Home</a></li>
+			<li><a href=../index.php>Home</a></li>
   			<li><a href="../Cervezas/index.php">Cervezas</a></li>
   			<li><a href="../Vinos/vino.php">Vinos</a></li>
   			<li><a class="active" href="index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
-  			<li><a href="../Login/index.html">Entrar</a></li>
   			<li><a href="../About/index.html">About Us</a></li>
 		</ul>
 		</nav>
