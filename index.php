@@ -7,32 +7,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/CSS.css" >
+	<script language="Javascript" src="http://gd.geobytes.com/gd?after=-1&variables=GeobytesCountry,GeobytesCity,GeobytesR egion"></script>
 </head>
 <body>
-	<?php 
-	$Ip;
+	<script type="text/javascript">
+		var ciudad = sGeobytesCity;
+		var pais = sGeobytesCountry;
+	</script>
+	<?php
 
-		if($_SERVER["HTTP_X_FORWARDED_FOR"]){ 
-			$Ip=$_SERVER['HTTP_X_FORWARDED_FOR'];
-}else{ 
-		$Ip=$_SERVER['REMOTE_ADDR'];
+	$dbhost = "localhost";
+  		$dbuser = "insertation";
+ 		$dbpass = "";
+ 		$dbname = "gin_cerv";
+ 		$tablename= "visita";
 
-	} 
-	//HTTP_CF_IPCOUNTRY
-	$Lugar=$_SERVER['HTTP_CF_IPCOUNTRY'];
-	$hoy =$hoy = date("d.m.y");                         // 03.
+ 		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); 
+ 		if(mysqli_connect_errno()) {
+ 		   die("Database connection failed: " . 
+        		 mysqli_connect_error() . 
+        		 " (" . mysqli_connect_errno() . ")"
+   			 );
+ 		 }
+	
+	$hoy = date("y.m.d"); 
+	$ciudad = "<script> document.write(ciudad) </script>";
+	$pais = "<script> document.write(pais) </script>"; 
+	//echo "siudad: " .$ciudad ." Pais: ".$pais ; 
+	//solo funciona si es en un servidor real, no local
+	$query = "INSERT INTO `$tablename` (id, ciuada, pais, fecha) VALUES (,'$ciudad','$pais','$hoy')" ; 
+	$connection->close();                   
 ?> 
 
-	 ?>
+	 
 	<header align="center"><h1>Gin&Cerv</h1></header>
 	<body>
 		<nav>
 		<ul>
-			<li><a class="active" href=index.html>Home</a></li>
+			<li><a class="active" href=index.php>Home</a></li>
   			<li><a href="Cervezas/index.php">Cervezas</a></li>
   			<li><a href="Vinos/vino.php">Vinos</a></li>
   			<li><a href="Licores/index.php">Licores generales</a></li>
-  			<li><a href="Login/index.html">Entrar</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="About/index.html">About Us</a></li>
 		</ul>
@@ -60,7 +75,6 @@
 		</div>
 	</div>
 	<footer>
-		
 	</footer>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>

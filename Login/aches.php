@@ -11,7 +11,7 @@
 <body>
 	<nav>
 		<ul>
-			<li><a href=../index.html>Home</a></li>
+			<li><a href=../index.php>Home</a></li>
   			<li><a href="../Cervezas/index.php">Cervezas</a></li>
   			<li><a href="../Vinos/vino.php">Vinos</a></li>
   			<li><a href="../Licores/index.php">Licores generales</a></li>
