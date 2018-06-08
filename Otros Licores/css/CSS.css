@@ -91,9 +91,12 @@ nav li a:hover {
   }
  header{
 	height: 100px;
+	font: oblique bold 120% cursive;
 	background-color:#D1D0D8;
 	text-transform:uppercase;
 	width: 100%;
+	padding-top: 10px;
+
  }
  img.logo{
   position: fixed;
