@@ -18,18 +18,18 @@
 	<?php
 
 	$dbhost = "localhost";
-  		$dbuser = "insertation";
- 		$dbpass = "";
- 		$dbname = "gin_cerv";
- 		$tablename= "visita";
+			$dbuser = "insertation";
+		$dbpass = "";
+		$dbname = "gin_cerv";
+		$tablename= "visita";
 
- 		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
- 		if(mysqli_connect_errno()) {
- 		   die("Database connection failed: " .
-        		 mysqli_connect_error() .
-        		 " (" . mysqli_connect_errno() . ")"
-   			 );
- 		 }
+		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+		if(mysqli_connect_errno()) {
+			 die("Database connection failed: " .
+						 mysqli_connect_error() .
+						 " (" . mysqli_connect_errno() . ")"
+				 );
+		 }
 
 	$hoy = date("y.m.d");
 	$ciudad = "<script> document.write(ciudad) </script>";
@@ -38,8 +38,7 @@
 	//solo funciona si es en un servidor real, no local
 	$query = "INSERT INTO `$tablename` (id, ciuada, pais, fecha) VALUES (,'$ciudad','$pais','$hoy')" ;
 	$connection->close();
-?>
-
+	?>
 
 	<header align="center"><h1>Gin&Cerv</h1></header>
 	<body>
@@ -55,26 +54,28 @@
 	</nav>
 	</body>
 	<div class="row">
+      <div class="col-md-5">
+				<div class ="img"> <a href="Vinos/vino.php"> <img 	src="Imagenes\Vinos\Vinos.jpg" alt="Cargando vinos..." width="280px" height="250px" > </a> <span>Vinos</span> </div>
+			<br><br><br><br><br><br><br><br><br><br><br><br></div>
+      <div class="col-md-5">
+			<div class ="img"><a href="Cervezas/index.php"> <img src="Imagenes\Cervezas.jpeg" alt="Cargando cervezas..." width="280px" height="250px"> </a> <span>Cervezas</span> </div>
 			<div class='col-md-2'></div>
-      <div class="col-md-5">
-				<a href="Vinos/vino.php"> <img 	src="Imagenes\Vinos\Vinos.jpg" alt="Cargando vinos..." width="280px" height="250px" > </a>
-      </div>
-      <div class="col-md-5">
-				<a href="Cervezas/index.php"> <img src="Imagenes\Cervezas.jpeg" alt="Cargando cervezas..." width="280px" height="250px"> </a>
-      </div>
+	</div>
     </div>
 
 <br><br>
 
 	<div class="row">
+		<div class="col-md-5">
+		<div class ="img"> <a href="Licores/index.php"> <img src="Imagenes\Licores.jpg" alt="Cargando licores..." width="280px" height="250px"> </a> <span>Licores generales</span> </div>
+		</div>
+		<div class="col-md-5">
+		<div class ="img"> <a href=""> <img src="Imagenes\Otros\Otros.jpg" alt="Cargando otros..." width="280px" height="250px" > </a> <span>Otros licores</span> </div>
 		<div class='col-md-2'></div>
-		<div class="col-md-5">
-			<a href="Licores/index.php"> <img src="Imagenes\Licores.jpg" alt="Cargando licores..." width="280px" height="250px"> </a>
-		</div>
-		<div class="col-md-5">
-			<a href=""> <img src="Imagenes\Otros\Otros.jpg" alt="Cargando otros..." width="280px" height="250px"/> </a>
-		</div>
 	</div>
+	</div>
+
+
 	<footer>
 	</footer>
 	<script src="js/jquery-2.1.4.min.js"></script>
