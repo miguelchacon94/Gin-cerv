@@ -69,7 +69,10 @@
 			}
 			mysqli_close($connection);
 		?>
-		</div>
+		</div></body>
+		<footer>
+		<p>Si sigue usted navegando es que acepta nuestros <a href="../aviso_legal.html"> Terminos y condiciones</a></p>
+	</footer>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>

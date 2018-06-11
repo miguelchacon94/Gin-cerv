@@ -121,8 +121,6 @@ mysqli_close($connection);
 </div>
       <script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	</body>
-	<footer>
 		<div class="do-the-thing">
                 <div class="elevator">
                     <svg class="sweet-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" height="100px" width="100px">
@@ -132,8 +130,9 @@ mysqli_close($connection);
                     
                 </div>
             </div>
-
-
+            </body>
+<footer>
+  <p>Si sigue usted navegando es que acepta nuestros <a href="../aviso_legal.html"> Terminos y condiciones</a></p>
 	</footer>
 
 	<script>
@@ -142,7 +141,7 @@ mysqli_close($connection);
             var elementButton = document.querySelector('.elevator');
             var elevator = new Elevator({
                 element: elementButton,
-                mainAudio: './music/elevator.mp3', // Music from http://www.bensound.com/
+                mainAudio: './music/elevator.mp3', 
                 endAudio:  './music/cerveza.mp3'
             });
 

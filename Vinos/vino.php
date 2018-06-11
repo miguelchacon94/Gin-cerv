@@ -133,14 +133,14 @@ mysqli_close($connection);
             var elementButton = document.querySelector('.elevator');
             var elevator = new Elevator({
                 element: elementButton,
-                mainAudio: './music/elevator.mp3', // Music from http://www.bensound.com/
+                mainAudio: './music/elevator.mp3', 
                 endAudio:  './music/ding.mp3'
             });
 
         </script>
 
 </body>
-
+<footer><p>Si sigue usted navegando es que acepta nuestros <a href="../aviso_legal.html"> Terminos y condiciones</a></p></footer>
 <script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/script.js"></script>
