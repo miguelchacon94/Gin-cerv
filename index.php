@@ -14,32 +14,32 @@
 		var ciudad = sGeobytesCity;
 		var pais = sGeobytesCountry;
 	</script>
-
 	<?php
 
 	$dbhost = "localhost";
-			$dbuser = "insertation";
-		$dbpass = "";
-		$dbname = "gin_cerv";
-		$tablename= "visita";
+  		$dbuser = "insertation";
+ 		$dbpass = "";
+ 		$dbname = "gin_cerv";
+ 		$tablename= "visita";
 
-		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-		if(mysqli_connect_errno()) {
-			 die("Database connection failed: " .
-						 mysqli_connect_error() .
-						 " (" . mysqli_connect_errno() . ")"
-				 );
-		 }
-
-	$hoy = date("y.m.d");
+ 		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname); 
+ 		if(mysqli_connect_errno()) {
+ 		   die("Database connection failed: " . 
+        		 mysqli_connect_error() . 
+        		 " (" . mysqli_connect_errno() . ")"
+   			 );
+ 		 }
+	
+	$hoy = date("y.m.d"); 
 	$ciudad = "<script> document.write(ciudad) </script>";
-	$pais = "<script> document.write(pais) </script>";
-	//echo "siudad: " .$ciudad ." Pais: ".$pais ;
+	$pais = "<script> document.write(pais) </script>"; 
+	//echo "siudad: " .$ciudad ." Pais: ".$pais ; 
 	//solo funciona si es en un servidor real, no local
-	$query = "INSERT INTO `$tablename` (id, ciuada, pais, fecha) VALUES (,'$ciudad','$pais','$hoy')" ;
-	$connection->close();
-	?>
+	$query = "INSERT INTO `$tablename` (id, ciuada, pais, fecha) VALUES (,'$ciudad','$pais','$hoy')" ; 
+	$connection->close();                   
+?> 
 
+	 
 	<header align="center"><h1>Gin&Cerv</h1></header>
 	<body>
 		<nav>
@@ -52,7 +52,6 @@
   			<li><a href="About/index.html">About Us</a></li>
 		</ul>
 	</nav>
-	</body>
 	<div class="row">
       <div class="col-md-5">
 				<div class ="img"> <a href="Vinos/vino.php"> <img 	src="Imagenes\Vinos\Vinos.jpg" alt="Cargando vinos..." width="280px" height="250px" > </a> <span>Vinos</span> </div>
@@ -75,7 +74,7 @@
 	</div>
 	</div>
 
-
+</body>
 	<footer>
 	</footer>
 	<script src="js/jquery-2.1.4.min.js"></script>

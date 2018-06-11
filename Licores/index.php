@@ -49,13 +49,13 @@
        				 if ($contador<4) {
     						
     					
-       				 echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="Licor" width="200px" height="250px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
+       				 echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="Licor" width="255px" height="450px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
        				 $contador+1;
        				 }else{
        				 	$contador=0;
        				 	echo "</div>";
        				 	echo '<div class="row">';
-       				 	echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="Licor" width="200px" height="250px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
+       				 	echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="Licor" width="255px" height="450px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
        				 	$contador+1;
        				 }
     					}

@@ -10,7 +10,7 @@
 </head>
 <body>
 	
-	<header align="center"><h1>Cervezas</h1></header>
+	<header align="center"><h1>Vinos</h1></header>
 	<body>
 		<nav>
 		<ul>
@@ -48,7 +48,7 @@
 			if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo '<img src="images/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'" width="200px" height="250px"> <p> Nombre:'  . utf8_encode($row["nombre"]). " </p> <p>Tipo: " . utf8_encode($row["tipo"]). "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p><p>Opinion: </p><p>".utf8_encode($row["opinion"])."</p>";
+        echo '<img src="images/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'"> <p> Nombre:'  . utf8_encode($row["nombre"]). " </p> <p>Tipo: " . utf8_encode($row["tipo"]). "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p><p>Opinion: </p><p>".utf8_encode($row["opinion"])."</p>";
     }
 }
 

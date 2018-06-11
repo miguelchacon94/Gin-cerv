@@ -51,7 +51,7 @@
 			if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo '<img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'" width="200px" height="250px"> <p> Nombre:'  . utf8_encode($row["nombre"]). " </p> <p>Tipo: " . utf8_encode($row["tipo"]). "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p><p>Opinion: </p><p>".utf8_encode($row["opinion"])."</p>";
+        echo '<img src="ImagenesCerv/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'"> <p> Nombre:'  . utf8_encode($row["nombre"]). " </p> <p>Tipo: " . utf8_encode($row["tipo"]). "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p><p>Opinion: </p><p>".utf8_encode($row["opinion"])."</p>";
     }
 }
 

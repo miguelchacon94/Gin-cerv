@@ -11,7 +11,7 @@
 	<script src='js/elevator.js'></script>
 </head>
 <body>
-
+	
 	<header align="center"><h1>Vinos</h1></header>
 	<body>
 		<nav>
@@ -24,7 +24,7 @@
   			<li><a href="../About/index.html">About Us</a></li>
   		</ul>
 		</nav>
-
+		
 
 		<?php
 		$dbhost = "localhost";
@@ -35,8 +35,8 @@
  		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
  		 // Test if connection succeeded
  		 if(mysqli_connect_errno()) {
- 		   die("Database connection failed: " .
-        		 mysqli_connect_error() .
+ 		   die("Database connection failed: " . 
+        		 mysqli_connect_error() . 
         		 " (" . mysqli_connect_errno() . ")"
    			 );
  		 }
@@ -45,19 +45,19 @@
  		 	if ($result) {
 				if ($result->num_rows > 0) {
 					$contador=0;
-
+				
 					echo '<div class="row">';
     				while($row = $result->fetch_assoc()) {
     					if ($contador<4) {
-
-
-       				 echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'" width="100px" height="250px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
+    						
+    					
+       				 echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'" width="255px" height="450px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
        				 $contador+1;
        				 }else{
        				 	$contador=0;
        				 	echo "</div>";
        				 	echo '<div class="row">';
-       				 	echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="Cerveza" width="100px" height="250px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
+       				 	echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="Cerveza" width="255px" height="450px"> <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . $row["lugar"]. "</p></div>";
        				 	$contador+1;
        				 }
     					}
@@ -66,8 +66,8 @@
     						echo '<div class="col-md-'.$resto.'"></div>';
     					}
 							echo "</div>";
-    					}
-
+    					}			
+				
 				} else {
 		// Failure
 		// $message = "Subject creation failed";
@@ -77,11 +77,11 @@
 		?>
 		<div class="row">
 			<div class="col-md-3"></div><div class="col-md-6">
-
+				
 		<p >¿De que vino quieres saber nuestra opinión?</p>
 		<form action="informacioncompleta.php" method="POST" >
 <select name="vino">
-<?php
+<?php 
 	$dbhost = "localhost";
   		$dbuser = "selection";
  		$dbpass = "";
@@ -90,8 +90,8 @@
  		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
  		 // Test if connection succeeded
  		 if(mysqli_connect_errno()) {
- 		   die("Database connection failed: " .
-        		 mysqli_connect_error() .
+ 		   die("Database connection failed: " . 
+        		 mysqli_connect_error() . 
         		 " (" . mysqli_connect_errno() . ")"
    			 );
  		 }
@@ -112,7 +112,7 @@ mysqli_close($connection);
 </div>
 <div class="col-md-3"></div>
 </div>
-
+	
 
 		<div class="do-the-thing">
                 <div class="elevator">
@@ -120,12 +120,12 @@ mysqli_close($connection);
                         <path d="M70,47.5H30c-1.4,0-2.5,1.1-2.5,2.5v40c0,1.4,1.1,2.5,2.5,2.5h40c1.4,0,2.5-1.1,2.5-2.5V50C72.5,48.6,71.4,47.5,70,47.5z   M47.5,87.5h-5v-25h5V87.5z M57.5,87.5h-5v-25h5V87.5z M67.5,87.5h-5V60c0-1.4-1.1-2.5-2.5-2.5H40c-1.4,0-2.5,1.1-2.5,2.5v27.5h-5  v-35h35V87.5z"/>
                         <path d="M50,42.5c1.4,0,2.5-1.1,2.5-2.5V16l5.7,5.7c0.5,0.5,1.1,0.7,1.8,0.7s1.3-0.2,1.8-0.7c1-1,1-2.6,0-3.5l-10-10  c-1-1-2.6-1-3.5,0l-10,10c-1,1-1,2.6,0,3.5c1,1,2.6,1,3.5,0l5.7-5.7v24C47.5,41.4,48.6,42.5,50,42.5z"/>
                     </svg>
-
+                    
                 </div>
             </div>
 
 
-
+	
 
 	<script>
 
