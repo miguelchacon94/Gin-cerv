@@ -7,6 +7,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/CSS.css" >
+	<link href="css/hover.css" rel="stylesheet" media="all">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" media="all">
 	<script language="Javascript" src="http://gd.geobytes.com/gd?after=-1&variables=GeobytesCountry,GeobytesCity,GeobytesR egion"></script>
 </head>
 <body>
@@ -16,7 +18,7 @@
 	</script>
 	<?php
 
-	$dbhost = "localhost";
+		$dbhost = "localhost";
   		$dbuser = "insertation";
  		$dbpass = "";
  		$dbname = "gin_cerv";
@@ -40,7 +42,7 @@
 ?> 
 
 	 
-	<header align="center"><h1>Gin&Cerv</h1></header>
+	<header><h1 align="center">Gin&Cerv</h1></header>
 	<body>
 		<nav>
 		<ul>
@@ -55,10 +57,10 @@
 	<div class="row">
 		<div class='col-md-1'></div>
       <div class="col-md-5">
-				<div > <a href="Vinos/index.php"> <img 	src="Imagenes\Vinos\Vinos.jpg" alt="Vinos" width="280px" height="250px" > </a> <h4> Vinos </h4> </div>
+				<div > <a href="Vinos/index.php" class="hvr-curl-top-left"> <img 	src="Imagenes\Vinos\Vinos.jpg" alt="Vinos" width="280px" height="250px" > </a> <h4> Vinos </h4> </div>
 			</div>
       <div class="col-md-5">
-			<div <a href="Cervezas/index.php"> <img src="Imagenes\Cervezas.jpeg" alt="Cervezas" width="280px" height="250px"> </a> <h4> Cervezas </h4></div>
+			<div> <a href="Cervezas/index.php" class="hvr-curl-top-right"> <img src="Imagenes\Cervezas.jpeg" alt="Cervezas" width="280px" height="250px"> </a> <h4> Cervezas </h4></div>
 			<div class='col-md-1'></div>
 	</div>
     </div>
@@ -66,20 +68,19 @@
 	<div class="row">
 		<div class='col-md-1'></div>
 		<div class="col-md-5">
-		<div > <a href="Licores/index.php"> <img src="Imagenes\Licores.jpg" alt="Licores" width="280px" height="250px"> </a>  <h4> Licores generales </h4> </div>
+		<div > <a href="Licores/index.php" class="hvr-curl-bottom-left"> <img src="Imagenes\Licores.jpg" alt="Licores" width="280px" height="250px"> </a>  <h4> Licores generales </h4> </div>
 		</div>
 		<div class="col-md-5">
-		<div > <a href=""> <img src="Imagenes\Otros\Otros.jpg" alt="Otros" width="280px" height="250px" > </a> </a> <h4> Otros licores </h4> </div>
+		<div > <a href="" class="hvr-curl-bottom-right"> <img src="Imagenes\Otros\Otros.jpg" alt="Otros" width="280px" height="250px" > </a> </a> <h4> Otros licores </h4> </div>
 		<div class='col-md-1'></div>
 	</div>
 	</div>
 
 </body>
 	<footer>
-		<p>Si sigue usted navegando es que acepta nuestros <a href="aviso_legal.html"> Terminos y condiciones</a></p>
+		<p>Si sigue usted navegando es que acepta nuestros <a href="aviso_legal.html"> Terminos y condiciones</a>.</p>
 	</footer>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
 </body>
 </html>
