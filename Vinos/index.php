@@ -18,7 +18,7 @@
 		<ul>
 			<li><a href="../index.php">Home</a></li>
   			<li><a href="../Cervezas/index.php">Cervezas</a></li>
-  			<li><a class="active" href="vino.php">Vinos</a></li>
+  			<li><a  class="active" href="../Vinos/index.php">Vinos</a></li>
   			<li><a href="../Licores/index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="../About/index.html">About Us</a></li>
@@ -76,7 +76,7 @@
 			mysqli_close($connection);
 		?>
 		<div class="row">
-			<div class="col-md-3"></div><div class="col-md-6">
+			<div class="col-md-1"></div><div class="col-md-5">
 				
 		<p >¿De que vino quieres saber nuestra opinión?</p>
 		<form action="informacioncompleta.php" method="POST" >
@@ -110,7 +110,18 @@ mysqli_close($connection);
 <p ><input type="submit" /></p>
 </form>
 </div>
-<div class="col-md-3"></div>
+<div class="col-md-5">
+	<p >¿De que vino quieres saber nuestra opinión?</p>
+		<form action="informacionconjunta.php" method="POST" >
+			<select name="tipo">
+				<option name="tipo" value="Tinto">Tinto</option>
+				<option name="tipo" value="Blanco">Blanco</option>
+				<option name="tipo" value="Rosado">Rosado</option>
+			</select>
+			<p ><input type="submit" /></p>
+		</form>
+</div>
+<div class="col-md-1"></div>
 </div>
 	
 

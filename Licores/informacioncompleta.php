@@ -16,7 +16,7 @@
 		<ul>
 			<li><a href=../index.php>Home</a></li>
   			<li><a  href="../Cervezas/index.php">Cervezas</a></li>
- 			<li><a href="../Vinos/vino.php">Vinos</a></li>
+ 			<li><a href="../Vinos/index.php">Vinos</a></li>
   			<li><a class="active" href="index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="../About/index.html">About Us</a></li>
@@ -51,7 +51,7 @@
 			if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-        echo '<img src="images/'.$row["nombre"]. '.jpg" alt="'.$row["nombre"].'"> <p> Nombre:'  . utf8_encode($row["nombre"]). " </p> <p>Tipo: " . utf8_encode($row["tipo"]). "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p><p>Opinion: </p><p>".utf8_encode($row["opinion"])."</p>";
+        echo '<img src="images/'.utf8_encode($row["nombre"]). '.jpg" alt="'.utf8_encode($row["nombre"]).'" class="responsive"> <p> Nombre:'  . utf8_encode($row["nombre"]). " </p> <p>Tipo: " . utf8_encode($row["tipo"]). "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p><p>Opinion: </p><p>".utf8_encode($row["opinion"])."</p>";
     }
 }
 

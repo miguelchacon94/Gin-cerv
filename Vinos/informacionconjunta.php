@@ -9,14 +9,14 @@
 	<link rel="stylesheet" href="css/CSS.css" >
 </head>
 <body>
-<header align="center"><h1>Licores</h1></header>
+<header align="center"><h1>Vinos</h1></header>
 	<body>
 		<nav>
 		<ul>
 			<li><a href=../index.php>Home</a></li>
   			<li><a  href="../Cervezas/index.php">Cervezas</a></li>
- 			<li><a href="../Vinos/index.php">Vinos</a></li>
-  			<li><a class="active" href="index.php">Licores generales</a></li>
+ 			<li><a lass="active" href="index.php">Vinos</a></li>
+  			<li><a  href="../Licores/index.php">Licores generales</a></li>
   			<li><a href="">Otros licores</a></li>
   			<li><a href="../About/index.html">About Us</a></li>
   		</ul>
@@ -28,7 +28,7 @@
   		$dbuser = "selection";
  		$dbpass = "";
  		$dbname = "gin_cerv";
- 		$tablename= "licor";
+ 		$tablename= "vino";
  		$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
  		 // Test if connection succeeded
  		 if(mysqli_connect_errno()) {
@@ -41,7 +41,7 @@
  					 $nombre = $_POST['tipo'];
 
     		$query  = "SELECT * ";
-			$query .= "FROM licor ";
+			$query .= "FROM vino ";
 			$query .= "WHERE tipo = '$nombre'";
 
 			$result = mysqli_query($connection, $query);
@@ -54,14 +54,14 @@
     						
     					
        				 echo '<div class="col-md-4"> '; 
-       				 echo '<img src="images/'.$row["nombre"]. '.jpg" alt="' .$row["nombre"]. '" class="responsive" ><p  > Nombre:'  . $row["nombre"]. ' </p> <p>Tipo: ' . $row["tipo"]. "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p></div>";
+       				 echo '<img src="images/'.$row["nombre"]. '.jpg" alt="' .$row["nombre"]. '" class="responsive"  ><p  > Nombre:'  . $row["nombre"]. ' </p> <p>Tipo: ' . $row["tipo"]. "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p></div>";
        				 $contador+1;
        				 $iterador+1;
        				 }else{
        				 	$contador=0;
        				 	echo "</div>";
        				 	echo '<div class="row">';
-       				 	echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="' .$row["nombre"]. '"" class="responsive"   > <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p></div>";
+       				 	echo '<div class="col-md-4"> <img src="images/'.$row["nombre"]. '.jpg" alt="' .$row["nombre"]. '" class="responsive"   > <p> Nombre:'  . $row["nombre"]. " </p> <p>Tipo: " . $row["tipo"]. "</p> <p> Lugar: " . utf8_encode($row["lugar"]). "</p></div>";
        				 	$contador+1;
        				 	$iterador+1;
        				 }
