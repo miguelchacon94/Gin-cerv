@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-06-2018 a las 18:10:10
+-- Tiempo de generación: 12-06-2018 a las 12:17:07
 -- Versión del servidor: 10.1.31-MariaDB
 -- Versión de PHP: 7.2.3
 
@@ -68,7 +68,9 @@ CREATE TABLE `licor` (
 --
 
 INSERT INTO `licor` (`id_licor`, `nombre`, `tipo`, `clasificacion`, `lugar`, `opinion`) VALUES
-(1, 'Sipsmith', 'Ginebra', NULL, 'Londres', 'Ginebra artesanal de gran calidad que huye de finuras, con un gran potencial.');
+(1, 'Sipsmith', 'Ginebra', NULL, 'Londres', 'Ginebra artesanal de gran calidad que huye de finuras, con un gran potencial.'),
+(2, 'Absolut', 'Vodka Blanco', 'Vodka Blanco', 'Rusia', 'Absolut Vodka se hace exclusivamente a partir de ingredientes naturales y, a diferencia de lo que ocurre con muchos otros vodkas, no contiene azúcar añadido. Absolut es, de hecho, tan puro como puede ser el vodka. Aún así, la pureza tiene un sabor: rico, con cuerpo y complejo, pero suave y maduro con el carácter distintivo del grano de trigo, seguido de un toque a frutas secas.'),
+(3, 'Jagermeister', 'Licor de hierbas', 'Licor de Hierbas', 'Alemania', 'El auge de Jägermeister ha coincidido con la crisis. Los jóvenes han puesto en duda lo políticamente correcto. Dejan de confiar en la gente que gobierna y en cómo les tratan las empresas. Hemos hecho las cosas de manera distinta. Somos transgresores y nos ven como un amigo en conciertos y fiestas”, apunta Vicens Bisbal, embajador de la marca en España. Estados Unidos es el principal mercado, seguido por Alemania, Reino Unido e Italia, pero España es el más reciente.Pero por el camino hubo baches.');
 
 -- --------------------------------------------------------
 
@@ -194,7 +196,7 @@ ALTER TABLE `cerveza`
 -- AUTO_INCREMENT de la tabla `licor`
 --
 ALTER TABLE `licor`
-  MODIFY `id_licor` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_licor` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `otro`
