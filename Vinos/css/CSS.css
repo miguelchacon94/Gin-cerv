@@ -89,14 +89,13 @@ nav li a:hover {
     color:grey;
     background-color:#E0F2F7;
   }
-
- header{
-	height: 100px;
-	font: oblique bold 120% cursive;
-	text-transform:uppercase;
-	width: 100%;
-	padding-top: 10px;
- }
+	header{
+ 	 height: 100px;
+ 	 font: oblique bold 120% cursive;
+ 	 text-transform:uppercase;
+ 	 width: 100%;
+ 	 padding-top: 10px;
+  }
  img.logo{
   position: fixed;
   top:26px;

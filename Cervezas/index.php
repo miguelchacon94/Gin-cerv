@@ -43,7 +43,7 @@
         		 " (" . mysqli_connect_errno() . ")"
    			 );
  		 }
- 		 	$query = "SELECT * FROM `$tablename`" ;
+ 		 	$query = "SELECT nombre, tipo, lugar FROM `$tablename`" ;
  		 	$result = mysqli_query($connection, $query);
  		 	if ($result) {
 				if ($result->num_rows > 0) {
@@ -102,7 +102,7 @@
         		 " (" . mysqli_connect_errno() . ")"
    			 );
  		 }
- 		 	$query = "SELECT * FROM `$tablename`" ;
+ 		 	$query = "SELECT nombre FROM `$tablename`" ;
  		 	$result = mysqli_query($connection, $query);
  		 	if ($result) {
 				if ($result->num_rows > 0) {
@@ -119,8 +119,7 @@ mysqli_close($connection);
 </div>
 <div class="col-md-3"></div>
 </div>
-      <script src="js/jquery-2.1.4.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+ 
 		<div class="do-the-thing">
                 <div class="elevator">
                     <svg class="sweet-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" height="100px" width="100px">
@@ -134,10 +133,9 @@ mysqli_close($connection);
 <footer>
   <p>Si sigue usted navegando es que acepta nuestros <a href="../aviso_legal.html"> Terminos y condiciones</a></p>
 	</footer>
-
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 	<script>
-
-            // Simple elevator usage.
             var elementButton = document.querySelector('.elevator');
             var elevator = new Elevator({
                 element: elementButton,

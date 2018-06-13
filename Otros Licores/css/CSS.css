@@ -4,7 +4,7 @@ body{
 	width: 80%;
 	margin: auto;
 	background: #E0E0F8;
-
+	
 }
 
 p.mover {
@@ -22,17 +22,17 @@ p.mover {
 	border-radius: 80px 80px 80px 80px;
 
 	border: 0px solid #053040;
-
+	
   }
 
-
+  
 p.mover:hover{
     background-color:#0B617F;
 }
-
+  
   nav{
     margin-bottom:3em;
-
+    
   }
 
  p{
@@ -41,11 +41,11 @@ p.mover:hover{
  	font-size: 17px;
  	text-align: justify;
  }
-
+  
   div.alincentral{
   	text-align: center;
   	margin: 0 auto;
-
+  	
   }
 nav ul {
     list-style-type: none;
@@ -53,7 +53,7 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: #71EC46;
-
+	
 }
 
 nav li {
@@ -77,11 +77,11 @@ nav li a {
 nav li a:hover {
     background-color: #111;
 }
-
+  
 .active {
     background-color: #1091BF;
 }
-
+  
   footer{
     clear:both;
     margin-top:1em;
@@ -89,23 +89,25 @@ nav li a:hover {
     color:grey;
     background-color:#E0F2F7;
   }
-	header{
- 	 height: 100px;
- 	 font: oblique bold 120% cursive;
- 	 text-transform:uppercase;
- 	 width: 100%;
- 	 padding-top: 10px;
-  }
+ header{
+	height: 100px;
+	font: oblique bold 120% cursive;
+	background-color:#D1D0D8;
+	text-transform:uppercase;
+	width: 100%;
+	padding-top: 10px;
+
+ }
  img.logo{
   position: fixed;
   top:26px;
   right:140px;
  }
-
+ 
 .videos{
 	 margin:auto;
 	 text-align: center;
-
+	
  }
  h1.cabecera{
   	font-family: Georgia, 'Times New Roman', serif;
@@ -118,7 +120,7 @@ nav li a:hover {
 h2{
 
 	color: #EA5E49;
-	font-size: 1.7rem;
+	font-size: 1.7rem; 
 	font-weight: 300;
 	text-transform: uppercase;
 	font-family: Georgia, 'Times New Roman', serif;
@@ -126,7 +128,7 @@ h2{
 	text-transform:uppercase;
 }
 h3{
-	color: #EA5E49;
+	color: #EA5E49; 
 	font-weight: 300;
 	text-transform: uppercase;
 	font-family: Georgia, 'Times New Roman', serif;
@@ -134,7 +136,7 @@ h3{
 	text-transform:uppercase;
 }
 div.color1{
-background:#EEEAC1;
+background:#EEEAC1;	
 }
 div.color2{
 	background: #F5DED0;

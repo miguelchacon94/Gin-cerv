@@ -103,7 +103,7 @@ header.inicial{
 	text-transform:uppercase;
 	width: 100%;
 	padding-top: 10px;
-	background-image: url("../Imagenes/cabeceracerv.jpg");
+	background-image: url("../Imagenes/logo.png");
 	background-size: 100% 140%;
  }
  img.logo{
@@ -175,7 +175,11 @@ img.grises:hover{
   margin: 0 auto;
   display: block;
 }
-
+img.icon {
+  max-width: 300px;
+  margin: 0 auto;
+  display: block;
+}
 .services section {
   text-align: center;
 }

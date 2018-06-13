@@ -181,17 +181,6 @@ margin:auto;
 	left: 40%;
 
 }
-div.img span{
- line-height:normal;
- font-size:11px;
- display:table-caption;
- margin:0;
- background:#646464;
- color:white;
- font-style:italic;
- padding:5px;
- text-align:center;
-}
 p.italic {
   font-style: italic;
 }

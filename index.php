@@ -4,7 +4,7 @@
 	<title>Gin&cerv</title>
 	<meta charset="utf-8" />
 	<meta http-equiv=”Content-Language” content=”es”/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/CSS.css" >
 	<link href="css/hover.css" rel="stylesheet" media="all">
@@ -42,8 +42,9 @@
 ?> 
 
 	 
-	<header><h1 align="center">Gin&Cerv</h1></header>
+	<header class="inicial"><h1 align="center">Gin&Cerv</h1></header>
 	<body>
+		
 		<nav>
 		<ul>
 			<li><a class="active" href=index.php>Home</a></li>
@@ -54,6 +55,7 @@
   			<li><a href="About/index.html">About Us</a></li>
 		</ul>
 	</nav>
+	
 	<div class="row">
 		<div class='col-md-1'></div>
       <div class="col-md-5">
@@ -80,6 +82,10 @@
 	<footer>
 		<p>Si sigue usted navegando es que acepta nuestros <a href="aviso_legal.html"> Terminos y condiciones</a>.</p>
 	</footer>
+	<script>
+function Reproducir(){
+document.all.sound.src = "cerveza.mp3"}
+</script>
 	<script src="js/jquery-2.1.4.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
